@@ -28,15 +28,11 @@ var Title = React.createClass({
     render: function () {
         return React.createElement(
             "div",
-            { className: "container" },
+            { className: "row" },
             React.createElement(
-                "div",
-                { className: "row" },
-                React.createElement(
-                    "h1",
-                    null,
-                    this.props.title
-                )
+                "h1",
+                null,
+                this.props.title
             )
         );
     }
@@ -71,10 +67,40 @@ var Button = React.createClass({
 
 });
 
+var Page = React.createClass({
+    displayName: "Page",
+
+    render: function () {
+        return React.createElement(
+            "myElement",
+            null,
+            React.createElement(Nav, { title: "React", linkURL: "index.html" }),
+            React.createElement(
+                "div",
+                { className: "container" },
+                React.createElement(Title, { title: "Welcome to React, let's start ? " }),
+                ",",
+                React.createElement(Button, { title: "Click Me", textActive: "Hello, guys !" })
+            )
+        );
+    }
+});
+
 /* Rendering  */
 
-ReactDOM.render(React.createElement(Nav, { title: "React", linkURL: "index.html" }), document.getElementById('nav'));
+ReactDOM.render(React.createElement(Page, null), document.getElementById('page'));
 
-ReactDOM.render(React.createElement(Title, { title: "Welcome to React, let's start ? " }), document.getElementById('title'));
-
-ReactDOM.render(React.createElement(Button, { title: "Click Me", textActive: "Hello, guys !" }), document.getElementById('button'));
+/*
+ReactDOM.render(
+    <Nav title="React" linkURL="index.html" />,
+    document.getElementById('nav')
+);    
+ ReactDOM.render(
+<Title title="Welcome to React, let's start ? " />,
+document.getElementById('title')
+);
+ReactDOM.render(
+<Button title = "Click Me" textActive = "Hello, guys !" />,
+document.getElementById('button')
+);
+*/

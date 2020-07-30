@@ -23,11 +23,11 @@ var Title = React.createClass({
 
     render:function (){
     return(
-        <div className="container">
+        
             <div className="row">
                 <h1>{ this.props.title }</h1>
             </div>
-        </div>
+        
 
     );
     }
@@ -62,8 +62,28 @@ var Title = React.createClass({
        });
        
 
+    var Page = React.createClass({
+        render : function (){
+            return(
+                <myElement>
+                    <Nav title="React" linkURL="index.html" />
+                    <div className="container">
+                        <Title title="Welcome to React, let's start ? " />,
+                        <Button title = "Click Me" textActive = "Hello, guys !" />
+                    </div>
+                </myElement>
+            );
+        }
+    });
+
     /* Rendering  */
 
+    ReactDOM.render(
+        <Page />,
+        document.getElementById('page')
+    );   
+
+    /*
     ReactDOM.render(
         <Nav title="React" linkURL="index.html" />,
         document.getElementById('nav')
@@ -78,3 +98,4 @@ ReactDOM.render(
     <Button title = "Click Me" textActive = "Hello, guys !" />,
     document.getElementById('button')
 );
+*/
