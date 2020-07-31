@@ -11,6 +11,8 @@ instruções de instalação do nodejs peguei nesse video https://www.youtube.co
 
 site do node nodejs.org
 
+site de teste http://avenidavirtual.com.br/react/
+
 instale a versão LTS ... a mais recomendada
 
 
