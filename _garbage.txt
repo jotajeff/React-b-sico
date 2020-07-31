@@ -1,0 +1,18 @@
+antigos componentes e seus rendering 
+
+/*
+    ReactDOM.render(
+        <Nav title="React" linkURL="index.html" />,
+        document.getElementById('nav')
+    );    
+
+    ReactDOM.render(
+    <Title title="Welcome to React, let's start ? " />,
+    document.getElementById('title')
+);
+
+ReactDOM.render(
+    <Button title = "Click Me" textActive = "Hello, guys !" />,
+    document.getElementById('button')
+);
+*/
